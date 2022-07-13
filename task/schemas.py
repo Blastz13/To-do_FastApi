@@ -44,6 +44,17 @@ class TaskRead(BaseModel):
 
     class Config:
         orm_mode = True
+        
+
+class TaskReadList(BaseModel):
+    id: int
+    owner: int
+    title: str
+    description: str
+    create_date: datetime.datetime
+
+    class Config:
+        orm_mode = True
 
 
 class TaskCreate(BaseModel):
